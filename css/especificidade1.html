@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* sexta-feira,13/08/2021;
+    das 22:35:00 as 22:55:00  h+|- 
+     */
+     /*
+     # Em linhas gerais...
+       01. regra com !important {tente evita-lo} ;
+       02. seletores  mais especificos;
+       03. última regra processada (empate) {o últino processado tem mais direito do que anteriormente}.
+
+
+     */
+     p{
+         background-color: #aaa;
+
+     }
+     .observacao{
+         background-color: #5f5!important;
+          border: dashed 5px;
+           padding: 200px;
+             font-size: 40px;
+     }
+       p.observacao {
+          padding: 2px;
+           background: linear-gradient(to right, red, yellow);
+       }
+
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+    </style>
+    
+
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>
